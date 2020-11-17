@@ -23,7 +23,7 @@ class ConfinementsController < ApplicationController
 
   def update
     if @confinement.update(confinement_params)
-      redirect_to @confinement, notice: `Félicitations, votre confinement a été ajouté #{user.name}`
+      redirect_to @confinement, notice: `Félicitations, votre confinement a été ajouté #{current_user.name}`
     else
       render :edit
     end
