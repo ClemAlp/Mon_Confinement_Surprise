@@ -1,0 +1,13 @@
+<div class="container">
+<ul>
+  <li> <%= @confinement.name %> </li>
+  <li> <%= @confinement.description %> </li>
+  <li> <%= @user.name %> </li>
+</ul>
+ <div class="cards-choice">
+  <h3> Piocher 2 cartes parmi les 3 présentées </h3>
+  </div>
+  <%= form_for (@booking) do |f| %>
+        <%= f.submit %>
+  <% end %>
+</div>
