@@ -1,14 +1,15 @@
 <h1>Confinements list</h1>
 <div class="container">
   <div class="cards">
-  <ul>
-    <% @confinements.each do |confinement| %>
-    <li>
-      <%= confinement.name %>
-        <%= link_to "See the Confinement", confinement_path(confinement), class: 'card-link' %>
-        </li>
-    <% end %>
-    </ul>
+    <ul>
+      <% @confinements.each do |confinement| %>
+      <li>
+        <%= confinement.name %>
+          <%= link_to "See the Confinement", confinement_path(confinement), class: 'card-link' %>
+          </li>
+      <% end %>
+      </ul>
+      <%= link_to "Create your lockdown situation", new_confinement_path %>
   </div>
 </div>
 
