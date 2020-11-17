@@ -9,10 +9,17 @@
 puts "Cleaning database..."
 
 Confinement.destroy_all
-
+# User.destroy_all
 puts "Adding Confinement to the DB"
 
 
+<<<<<<< HEAD
+Confinement.create!(name: 'mon petit chat', description: 'bla bla bla', user_id: 3)
+Confinement.create!(name: 'Campagne', description: 'bla bla bla', user_id: 3)
+Confinement.create!(name: 'City', description: 'bla bla bla', user_id: 3)
+# User.create!(name: 'toto', email: "toto@yahoo.com", password: "toossst")
+=======
 Confinement.create!(name: 'mon petit chat', description: 'bla bla bla', user_id: 1 )
 Confinement.create!(name: 'Campagne', description: 'bla bla bla', user_id: 1 )
 Confinement.create!(name: 'City', description: 'bla bla bla', user_id: 1 )
+>>>>>>> master
