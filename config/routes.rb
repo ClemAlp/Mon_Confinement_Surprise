@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :confinements do
-    resources :bookings, only [:new, :create]
+    resources :bookings, only: [:new, :create]
   end
-  resources :bookings, only[:index, :destroy]
+  resources :bookings, only: [:index, :destroy]
 end
