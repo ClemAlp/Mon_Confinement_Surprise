@@ -37,6 +37,8 @@ class ConfinementsController < ApplicationController
   end
 
   def destroy
+    @confinement.destroy
+    redirect_to confinements_path
   end
 
   private
