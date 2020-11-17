@@ -1,13 +1,12 @@
 class ConfinementsController < ApplicationController
-  def index
+  def home
   end
 
-  def home
-    @confinments = Confinement.all
+  def index
+    @confinements = Confinement.all
   end
 
   def new
     @confinement = Confinement.new
   end
-
 end
