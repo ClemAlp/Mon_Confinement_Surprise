@@ -7,12 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts "Cleaning database..."
-
 Confinement.destroy_all
+User.destroy_all
 
 puts "Adding Confinement to the DB"
 
+user = User.create!(email: 'zachariahrossy@gmail.com', password: 'testing', name: 'Zach')
 
-Confinement.create!(name: 'mon petit chat', description: 'bla bla bla', user_id: 8)
-Confinement.create!(name: 'Campagne', description: 'bla bla bla', user_id: 8)
-Confinement.create!(name: 'City', description: 'bla bla bla', user_id: 8)
+Confinement.create!(name: 'mon petit chat', description: 'bla bla bla', user: user)
+Confinement.create!(name: 'Campagne', description: 'bla bla bla', user: user)
+Confinement.create!(name: 'City', description: 'bla bla bla', user: user)
