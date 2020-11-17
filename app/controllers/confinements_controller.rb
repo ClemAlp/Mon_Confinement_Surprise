@@ -26,4 +26,3 @@ class ConfinementsController < ApplicationController
   def destroy
   end
 end
-
