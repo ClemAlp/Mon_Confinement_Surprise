@@ -5,13 +5,14 @@ class ConfinementsController < ApplicationController
   def index
     @confinements = Confinement.all
   end
-  
+
   def show
     @confinement = Confinement.find(params[:id])
   end
 
   def new
     @confinement = Confinement.new
+  end
 
   def create
   end
