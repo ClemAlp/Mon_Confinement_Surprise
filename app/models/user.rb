@@ -4,8 +4,7 @@ class User < ApplicationRecord
   has_many :confinements
   has_many :confinements, through: :bookings
   has_many :bookings
-  validates :name, :encrypted_password, presence: true
-  validates :email, presence: true, uniqueness: true
+  validates :name, presence: true
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable

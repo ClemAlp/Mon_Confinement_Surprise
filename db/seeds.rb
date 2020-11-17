@@ -9,9 +9,10 @@
 puts "Cleaning database..."
 
 Confinement.destroy_all
+User.destroy_all
 
 puts "Adding Confinement to the DB"
 
-10.times do
+
+  User.create!(name:'toto', email:'ryan@test.com')
   Confinement.create!(name: 'mon petit chat', description: 'bla bla bal')
-end
