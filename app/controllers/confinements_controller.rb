@@ -3,7 +3,7 @@ class ConfinementsController < ApplicationController
   end
 
   def home
-    @confinments = Confinement.all
+    @confinements = Confinement.all
   end
 
   def new
