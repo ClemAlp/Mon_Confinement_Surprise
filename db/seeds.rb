@@ -5,4 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-  
+
+puts "Cleaning database..."
+
+Confinement.destroy_all
+
+puts "Adding Confinement to the DB"
+
+
+Confinement.create!(name: 'mon petit chat', description: 'bla bla bla', user_id: 8)
+Confinement.create!(name: 'Campagne', description: 'bla bla bla', user_id: 8)
+Confinement.create!(name: 'City', description: 'bla bla bla', user_id: 8)
