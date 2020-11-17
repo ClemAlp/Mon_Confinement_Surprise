@@ -1,0 +1,3 @@
+class ConfinementsController < ApplicationController
+
+end
