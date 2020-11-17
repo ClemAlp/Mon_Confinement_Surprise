@@ -15,6 +15,13 @@ class ConfinementsController < ApplicationController
   end
 
   def create
+    @confinement = Confinement.new(confinement_params)
+    @confinement.user = current_user
+    if @confinement.save!
+      redirect_to confinements_path
+    else
+      render :new
+    end
   end
 
   def edit
@@ -25,5 +32,10 @@ class ConfinementsController < ApplicationController
 
   def destroy
   end
-end
 
+  private
+
+  def confinement_params
+    params.require(:confinement).permit(:name, :description)
+  end
+end
