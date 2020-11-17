@@ -16,6 +16,13 @@ class ConfinementsController < ApplicationController
   end
 
   def create
+    @confinement = Confinement.new(confinement_params)
+    @confinement.user = current_user
+    if @confinement.save!
+      redirect_to confinements_path
+    else
+      render :new
+    end
   end
 
   def edit
