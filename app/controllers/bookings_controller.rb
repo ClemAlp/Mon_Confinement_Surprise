@@ -1,7 +1,9 @@
 class BookingsController < ApplicationController
+
   def index
     @bookings = Booking.all(params[:user_id])
   end
+
   def new
     @confinement = Confinement.find(params[:confinement_id])
     @booking = Booking.new
@@ -13,7 +15,9 @@ class BookingsController < ApplicationController
     @booking = Booking.new(user_id: @user, confinement_id: @confinement)
     @booking.save!
     redirect_to confinement_bookings_path(@booking)
+
   end
+
   def destroy
   end
 end

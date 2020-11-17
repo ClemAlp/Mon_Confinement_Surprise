@@ -1,8 +1,11 @@
 <div class="container">
+
+
 <% @bookings.each do |booking| %>
   <ul>
     <li> <%= booking.confinement.name %> </li>
     <li> <%= booking.description %> </li>
   </ul>
 <% end %>
+
 </div>
