@@ -5,7 +5,9 @@ class BookingsController < ApplicationController
   end
 
   def new
+    @confinement = Confinement.find(params[:confinement_id])
     @booking = Booking.new
+    @user = current_user
   end
 
   def create
@@ -13,9 +15,10 @@ class BookingsController < ApplicationController
     @confinement = Confinement.find(params[:id])
     @booking = Booking.new(user_id: @user, confinement_id: @confinement)
     @booking.save!
+    redirect_to confinement_bookings_path(@booking)
+
   end
 
   def destroy
   end
-
 end

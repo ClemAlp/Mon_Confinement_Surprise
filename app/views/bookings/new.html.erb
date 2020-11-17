@@ -1,13 +1,19 @@
-<div class="class">
+<div class="container">
 
 <ul>
-  <li> <%= @booking.confinement.name %> </li>
-  <li> <%= @booking.confinement.description %> </li>
-  <li> <%= @booking.user.name %> </li>
+  <li> <%= @confinement.name %> </li>
+  <li> <%= @confinement.description %> </li>
+  <li> <%= @user.name %> </li>
 </ul>
 
+ <div class="cards-choice">
+  <h3> Piocher 2 cartes parmi les 3 présentées </h3>
+  </div>
 
 
-<%= button :submit, class: "btn btn-primary" %>
+  <%= form_for (@booking) do |f| %>
+        <%= f.submit %>
+  <% end %>
+
 
 </div>
