@@ -1,13 +1,17 @@
 class ConfinementsController < ApplicationController
-  def index
+  def home
   end
-
+  
+  def index
+    @confinements = Confinement.all
+  end
+  
   def show
     @confinement = Confinement.find(params[:id])
   end
 
   def new
-  end
+    @confinement = Confinement.new
 
   def create
   end

@@ -1,0 +1,9 @@
+<h1>Confinements list</h1>
+<div class="container">
+  <div class="cards">
+    <% @confinements.each do |confinement| %>
+      <%= confinement.name %>
+        <%= link_to "See the Confinement", confinement_path(confinement), class: 'card-link' %>
+    <% end %>
+  </div>
+</div>
