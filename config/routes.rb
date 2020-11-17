@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   # Ticke pour 18/10/2020
 
   resources :confinements do
-    resources :bookings, only: [:new, :create]
+    resources :bookings, only: [:new, :create, :show]
   end
   resources :bookings, only: [:index, :destroy]
 end
