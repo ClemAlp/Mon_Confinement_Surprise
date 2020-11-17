@@ -1,0 +1,9 @@
+<h1> Bienvenue <% current_user.name %> </h1>
+<ul>
+    <% @confinements.user_id.each do |confinement| %>
+    <li> <%= confinement.name %> <%= confinement.description %>
+      <%= link_to 'Edit', @confinement.edit  %> |
+      <%= link_to 'Destroy', @confinement.destroy %> |
+    </li>
+    <% end %>
+</ul>
