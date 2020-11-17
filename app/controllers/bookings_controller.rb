@@ -19,5 +19,7 @@ class BookingsController < ApplicationController
   end
 
   def destroy
+    @booking.destroy
+    redirect_to confinements_path
   end
 end
