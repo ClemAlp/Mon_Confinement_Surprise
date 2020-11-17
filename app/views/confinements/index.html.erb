@@ -1,9 +1,16 @@
 <h1>Confinements list</h1>
 <div class="container">
   <div class="cards">
+  <ul>
     <% @confinements.each do |confinement| %>
+    <li>
       <%= confinement.name %>
         <%= link_to "See the Confinement", confinement_path(confinement), class: 'card-link' %>
+        </li>
     <% end %>
+    </ul>
   </div>
 </div>
+
+
+<%# if a user in logged in then they can add a confinement to the list%>
