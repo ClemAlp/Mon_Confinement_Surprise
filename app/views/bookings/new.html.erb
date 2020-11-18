@@ -36,9 +36,7 @@
       </div>
     </div>
 
-  <%= form_for (@booking) do |f| %>
-        <%= f.submit %>
-  <% end %>
+<%= link_to "Reserve", confinement_bookings_path(@confinement), method: :post  %>
 
 
 </div>
