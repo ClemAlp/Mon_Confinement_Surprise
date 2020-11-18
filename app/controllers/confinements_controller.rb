@@ -56,15 +56,3 @@ class ConfinementsController < ApplicationController
     params.require(:confinement).permit(:name, :description, :user_id)
   end
 end
-
-
-
-
-
-
-
-
-
-
-
-
