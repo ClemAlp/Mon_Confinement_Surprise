@@ -9,7 +9,6 @@ class BookingsController < ApplicationController
     @booking = Booking.new
     @user = current_user
   end
-
   def create
     @user = User.find(params[:id])
     @confinement = Confinement.find(params[:id])
@@ -20,5 +19,7 @@ class BookingsController < ApplicationController
   end
 
   def destroy
+    @booking.destroy
+    redirect_to confinements_path
   end
 end
