@@ -4,6 +4,10 @@ class BookingsController < ApplicationController
     @bookings = Booking.all(params[:user])
   end
 
+  def show
+  @booking = Booking.find(params[:id])
+  end
+
   def new
     @confinement = Confinement.find(params[:confinement_id])
     @user = current_user
