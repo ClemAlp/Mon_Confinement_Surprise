@@ -9,6 +9,32 @@
   <h3> Piocher 2 cartes parmi les 3 présentées </h3>
   </div>
 
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card"  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path "kittencard.png", height: 300, width: 400, crop: :fill %>')">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card"  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path "kittencard.png", height: 300, width: 400, crop: :fill %>')">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card"  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path "kittencard.png", height: 300, width: 400, crop: :fill %>')">
+          </div>
+        </div>
+      </div>
+    </div>
 
   <%= form_for (@booking) do |f| %>
         <%= f.submit %>
@@ -16,3 +42,4 @@
 
 
 </div>
+
