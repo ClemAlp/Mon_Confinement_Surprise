@@ -12,7 +12,8 @@ User.destroy_all
 puts "Adding Confinement to the DB"
 
 user = User.create!(email: 'zachariahrossy@gmail.com', password: 'testing', name: 'Zach')
-Confinement.create!(name: 'mon petit chat', description: 'bla bla bla', user: user)
+user_1 = User.create!(email: 'zachariahross@gmail.com', password: 'testing', name: 'Zach')
+Confinement.create!(name: 'mon petit chat', description: 'bla bla bla', user: user_1 )
 Confinement.create!(name: 'Campagne', description: 'Un super confinement à la campagne', user: user)
 Confinement.create!(name: 'City', description: 'Un super confinement en ville', user: user)
 

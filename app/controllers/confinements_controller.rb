@@ -10,7 +10,7 @@ class ConfinementsController < ApplicationController
 
   def user_index
     @user = current_user
-    @confinements = Confinement.where(params[:user_id])
+    @confinements = current_user.confinements
   end
 
   def show
