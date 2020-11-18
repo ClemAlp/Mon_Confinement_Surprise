@@ -1,7 +1,20 @@
 // Specific CSS for your home-page
+body, html {
+  height: 100%;
+}
+
 h1, p {
   color: white;
   font-family: 'Roboto', sans-serif;
+}
+
+.bg {
+  /* The image used */
+  background-image: url('../../images/image_background.png');
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .card-home {
