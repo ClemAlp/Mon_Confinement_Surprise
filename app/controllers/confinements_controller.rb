@@ -53,6 +53,6 @@ class ConfinementsController < ApplicationController
   end
 
   def confinement_params
-    params.require(:confinement).permit(:name, :description, :user_id)
+    params.require(:confinement).permit(:name, :description, :user_id, :photo)
   end
 end
