@@ -1,1 +1,21 @@
-<h1>This is the Show page</h1>
+<div class ="container">
+  <div class="page-title">
+    <h1><%= @confinement.name %></h1>
+  </div>
+  <div class="confinements-image-card">
+    <img scr ="#" alt="" width="400" height="200">
+  </div>
+  <div class="description">
+    <p><%= @confinement.description %></p>
+  </div>
+  <div class="ratings">
+    <p>STARS</p>
+  </div>
+  <div class="buttons">
+    <p><%= link_to "Je choisi ce confinement", new_confinement_booking_path(@confinement), class: 'btn'%></p>
+    <p><%= link_to "Retour aux confinements", confinements_path, class: 'btn'%></p>
+  </div>
+</div>
+
+
+
