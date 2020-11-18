@@ -9,7 +9,9 @@
     <p><%= @confinement.description %></p>
   </div>
   <div class="ratings">
-    <p>STARS</p>
+    <p><%= @confinement.first_criteria %></p>
+    <p><%= @confinement.second_criteria %></p>
+    <p><%= @confinement.third_criteria %></p>
   </div>
   <div class="buttons">
     <p><%= link_to "Je choisi ce confinement", new_confinement_booking_path(@confinement), class: 'btn'%></p>
