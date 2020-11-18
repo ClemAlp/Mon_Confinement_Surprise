@@ -5,11 +5,11 @@
       <% @confinements.each do |confinement| %>
       <li>
         <%= confinement.name %>
-          <%= link_to "See the Confinement", confinement_path(confinement), class: 'card-link' %>
+          <%= link_to "Voir le confinement", confinement_path(confinement), class: 'card-link' %>
           </li>
       <% end %>
       </ul>
-      <%= link_to "Create your lockdown situation", new_confinement_path %>
+      <p><%= link_to "Créer un confinement", new_confinement_path, class: 'btn btn-primary' %></p>
   </div>
 </div>
 
