@@ -11,8 +11,11 @@ Rails.application.routes.draw do
 
 
   resources :confinements do
-    resources :bookings, only: [:new, :create, :show]
+    resources :bookings, only: [:new, :create]
   end
-  resources :bookings, only: [:index, :destroy]
+  resources :bookings, only: [:index, :show, :destroy]
   get 'my_confinements', to: 'confinements#user_index', as: 'my_confinements'
 end
+
+
+#we want to grab all the info from confinement to create a new booking
