@@ -3,13 +3,15 @@
     <h1><%= @confinement.name %></h1>
   </div>
   <div class="confinements-image-card">
-    <img scr ="#" alt="" width="400" height="200">
+    <%= cl_image_tag @confinement.photo.key, height: 300, width: 400, crop: :fill %>
   </div>
   <div class="description">
     <p><%= @confinement.description %></p>
   </div>
   <div class="ratings">
-    <p>STARS</p>
+    <p><%= @confinement.first_criteria %></p>
+    <p><%= @confinement.second_criteria %></p>
+    <p><%= @confinement.third_criteria %></p>
   </div>
   <div class="buttons">
     <p><%= link_to "Je choisi ce confinement", new_confinement_booking_path(@confinement), class: 'btn'%></p>

@@ -1,1 +1,15 @@
 // Specific CSS for your home-page
+h1, p {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.card-home {
+  margin-top: 100px;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 550px;
+}
+
+.card-home-body {
+  padding: 20px;
+}
