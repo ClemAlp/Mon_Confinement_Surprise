@@ -3,7 +3,7 @@
     <h1><%= @confinement.name %></h1>
   </div>
   <div class="confinements-image-card">
-    <img scr ="#" alt="" width="400" height="200">
+    <%= cl_image_tag @confinement.photo.key, height: 300, width: 400, crop: :fill %>
   </div>
   <div class="description">
     <p><%= @confinement.description %></p>
