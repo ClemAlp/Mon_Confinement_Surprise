@@ -7,8 +7,12 @@ Rails.application.routes.draw do
   # end
   # Ticke pour 18/10/2020
 
+
+
+
   resources :confinements do
     resources :bookings, only: [:new, :create, :show]
   end
   resources :bookings, only: [:index, :destroy]
+  get 'my_confinements', to: 'confinements#user_index', as: 'my_confinements'
 end
