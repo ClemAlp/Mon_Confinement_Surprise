@@ -1,5 +1,13 @@
-<%= simple_form_for @confinement do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <%= simple_form_for @confinement do |f| %>
+    <div class="form-inputs">
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :first_criteria, label:'Interactions sociales', :collection => %w[0 1 2 3 4 5] %>
+      <%= f.input :second_criteria, label:'Pétage de cable',:collection => %w[0 1 2 3 4 5] %>
+      <%= f.input :third_criteria, label:'Uber Eats Friendly',:collection => %w[0 1 2 3 4 5] %>
+      <%= f.input :photo, as: :file, label: 'Insérer une photo:', class: "btn-primary"%>
+      <%= f.button :submit, class: "btn btn-primary btn-lg btn-block"  %>
+    </div>
+  <% end %>
+</div>
