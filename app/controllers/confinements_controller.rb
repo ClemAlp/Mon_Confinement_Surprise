@@ -8,6 +8,11 @@ class ConfinementsController < ApplicationController
     @confinements = Confinement.all
   end
 
+  def user_index
+    @user = current_user
+    @confinements = Confinement.where(params[:user_id])
+  end
+
   def show
   end
 
@@ -48,6 +53,6 @@ class ConfinementsController < ApplicationController
   end
 
   def confinement_params
-    params.require(:confinement).permit(:name, :description)
+    params.require(:confinement).permit(:name, :description, :user_id)
   end
 end
