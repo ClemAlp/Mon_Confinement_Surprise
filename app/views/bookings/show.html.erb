@@ -1,25 +1,32 @@
+<h1 class="text-center">Vous etes confinè ...</h1>
 <div class="container">
-<h1>Checkout your new booking!</h1>
+<div class="card">
+    <div class="card__inner">
+      <div class="card__face card__face--front">
+        <h2>Card Front</h2>
+      </div>
+      <div class="card__face card__face--back">
+        <div class="card__content">
+          <div class="card__header">
+            <img src="" alt="" class="pp" />
+            <h2>lorem ipsum</h2>
+          </div>
+          <div class="card__body">
+            <h3> Lorem ipsum, </h3>
+            <p>Lorem ipsum <strong>dolor</strong> sit amet, consectetur <strong>adipiscing</strong> elit. Sed id erat a magna lobortis dictum. Nunc est arcu, <strong>lacinia</strong> quis sapien placerat, <strong>laoreet</strong> tincidunt nulla.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
+<script>
+  const card = document.querySelector(".card__inner");
 
-  <% bnm = ["toto", "tata", "titi", "tete", "tata"]%>
-  <% mnb = ["zozo", "zaza", "zeze", "zyzy"]%>
+card.addEventListener("click", function (e) {
+  card.classList.toggle('is-flipped');
+});
+</script>
 
-<div class="container">
- <ul>
-    <li> <%= @booking.confinement.name %> </li>
-    <li> <%= @booking.confinement.description %> </li>
 
-  <div class ="rectangle">
-    <%= bnm.sample%>
-  </div>
-
-  <div class ="rectangle2">
-    <%= mnb.sample%>
-  </div>
- </ul>
-
-<%= "Congratulations, #{@booking.user.name}! You have successfully booked your confinement!"%>
-
-</div>
