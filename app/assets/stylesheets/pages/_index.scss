@@ -1,4 +1,21 @@
 // Import page-specific CSS files here.
 @import "home";
-
 @import "show";
+
+body{
+ background-color: #E5E5E5;
+}
+
+h2{
+  color: black;
+  font-family: 'Roboto', sans-serif;
+}
+
+p {
+  color: black;
+  font-family: 'Roboto', sans-serif;
+}
+
+.buttons a{
+  color: white;
+}
