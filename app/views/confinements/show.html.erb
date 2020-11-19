@@ -5,14 +5,38 @@
         <div class="show-picture">
           <%= cl_image_tag @confinement.photo.key, height: 300, width: 400, crop: :fill %>
         </div>
-        <div class="ratings">
-          <p>Interactions sociales
-            <% @confinement.first_criteria_rating.to_i.times do  %>
-            <span class="glyphicon glyphicon-star"></span>
+        <div class="stars-container">
+          <div class="ratings">
+            <p>Interactions sociales</p>
+            <p>Pétage de cable</p>
+            <p>Uber Eats friendly</p>
+          </div>
+          <div class="stars">
+            <p>
+            <% @confinement.first_criteria.times do %>
+              <i class="fas fa-star"></i>
             <% end %>
-          </p>
-          <p>Pétage de cable <%= @confinement.second_criteria %></p>
-          <p>Uber Eats friendly <%= @confinement.third_criteria %></p>
+            <% @confinement.blank_stars_1.times do %>
+              <i class="far fa-star"></i>
+            <% end %>
+            </p>
+            <p>
+              <% @confinement.second_criteria.times do %>
+                <i class="fas fa-star"></i>
+              <% end %>
+              <% @confinement.blank_stars_2.times do %>
+                <i class="far fa-star"></i>
+              <% end %>
+            </p>
+            <p>
+              <% @confinement.third_criteria.times do %>
+                <i class="fas fa-star"></i>
+              <% end %>
+              <% @confinement.blank_stars_3.times do %>
+                <i class="far fa-star"></i>
+              <% end %>
+            </p>
+          </div>
         </div>
       </div>
       <div class="row d-flex justify-items-center">
