@@ -1,8 +1,9 @@
 // Import page-specific CSS files here.
 @import "home";
-
-@import "show_booking";
 @import "show_confinement";
+@import "show_booking";
+@import "new_booking";
+
 
 body{
  background-color: #E5E5E5;
@@ -16,8 +17,10 @@ h2{
 p {
   color: black;
   font-family: 'Roboto', sans-serif;
+  font-weight: light;
 }
 
 .buttons a{
   color: white;
+  border-radius: 25px;
 }
