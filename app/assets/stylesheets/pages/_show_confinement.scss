@@ -9,7 +9,7 @@
   border: 1px solid #EEEEEE;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 5px;
+  border-radius: 25px;
 }
 
 .confinement-title {
@@ -28,11 +28,23 @@
   margin-left: 50px;
 }
 
-.ratings {
-  margin-left: 150px;
+.stars-container {
+  display: flex;
+  width: 300px;
+  margin-left: 120px;
   margin-top: 80px;
 }
 
 .show-btn {
   margin-left: 150px;
+}
+
+
+.stars {
+  padding-left: 15px;
+  text-align: right;
+}
+
+.fa-star {
+  color: #F69730;
 }
