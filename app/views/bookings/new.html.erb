@@ -34,8 +34,9 @@
     </div>
   </div>
 
-  <%= link_to "Reserve", confinement_bookings_path(@confinement), method: :post, class: "btn btn-primary", id: "btn-show" %>
+  <%= link_to "Reserve", confinement_bookings_path(@confinement), method: :post, class: "btn btn-primary", id: "btn-reserve" %>
   <%= link_to "Go back", root_path, class: "btn btn-primary", id: "btn-show"%>
+
 </div>
 
 
@@ -44,6 +45,7 @@
 const card = document.querySelector(".hidden_card__face--front");
 const card2 = document.querySelector(".hidden_card__face--front2");
 const card3 = document.querySelector(".hidden_card__face--front3");
+const reserve = document.querySelector("#btn-reserve")
 
 card.addEventListener("click", function (e) {
   card.classList.toggle('border');
