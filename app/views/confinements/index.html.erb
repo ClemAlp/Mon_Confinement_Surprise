@@ -1,19 +1,18 @@
-<div class="">
+<div class="container">
   <h1>Confinements list</h1>
 
   <div class="row d-flex">
-    <div class="">
-      <% @confinements.each do |confinement| %>
-      <div class="card-confi col-12 col-lg-4">
-        <%= cl_image_tag confinement.photo.key, class: 'rounded' %>
+    <% @confinements.each do |confinement| %>
+    <div class="col-12 col-lg-4">
+      <div class="card-confi mb-3">
+        <%= cl_image_tag confinement.photo.key, class: '' %>
         <div class="card-confi-infos">
         <div class="name"> <%= confinement.name %> </div>
         <div class="link"> <%= link_to "Ça se tente !", confinement_path(confinement) %> </div>
         </div>
       </div>
-      <% end %>
-
     </div>
+    <% end %>
   </div>
 
 
