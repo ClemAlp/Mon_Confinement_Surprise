@@ -9,8 +9,7 @@ h1, p {
 }
 
 .bg {
-  /* The image used */
-  background-image: url('../../images/image_background.png');
+  background-image: asset-url("home_background.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -18,8 +17,7 @@ h1, p {
 }
 
 .card-home {
-  margin-top: 100px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
   width: 550px;
 }
 
