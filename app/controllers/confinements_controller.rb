@@ -1,4 +1,5 @@
 class ConfinementsController < ApplicationController
+  before_action :authenticate_user!, only: [:new]
   before_action :set_confinement, only: [:show, :edit, :update, :destroy]
 
   def home
