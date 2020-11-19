@@ -1,7 +1,7 @@
 <div class ="container">
   <div class="confinements-image-card">
     <h2 class="confinement-title"><%= @confinement.name %></h2>
-      <div class="d-flex justify-content-between">
+      <div class="row d-flex justify-items-center">
         <div class="show-picture">
           <%= cl_image_tag @confinement.photo.key, height: 300, width: 400, crop: :fill %>
         </div>
@@ -11,7 +11,7 @@
           <p>Uber Eats friendly <%= @confinement.third_criteria %></p>
         </div>
       </div>
-      <div class="d-flex justify-content-between">
+      <div class="row d-flex justify-items-center">
         <div class="description">
           <p><%= @confinement.description %></p>
         </div>
