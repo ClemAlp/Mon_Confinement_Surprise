@@ -1,16 +1,24 @@
-<h1>Confinements list</h1>
-<div class="container">
-  <div class="cards">
-    <ul>
+<div class="">
+  <h1>Confinements list</h1>
+
+  <div class="row d-flex">
+    <div class="">
       <% @confinements.each do |confinement| %>
-      <li>
-        <%= confinement.name %>
-          <%= link_to "Voir le confinement", confinement_path(confinement), class: 'card-link' %>
-          </li>
+      <div class="card-confi col-12 col-lg-4">
+        <%= cl_image_tag confinement.photo.key, class: 'rounded' %>
+        <div class="card-confi-infos">
+        <div class="name"> <%= confinement.name %> </div>
+        <div class="link"> <%= link_to "Ça se tente !", confinement_path(confinement) %> </div>
+        </div>
+      </div>
       <% end %>
-      </ul>
-      <p><%= link_to "Créer un confinement", new_confinement_path, class: 'btn btn-primary' %></p>
+
+    </div>
   </div>
+
+
+      <p><%= link_to "Créer un confinement", new_confinement_path, class: 'btn btn-primary' %></p>
+
 </div>
 
 
