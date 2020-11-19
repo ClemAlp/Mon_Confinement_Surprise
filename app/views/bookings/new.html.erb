@@ -1,6 +1,6 @@
 
 <h1 class="text-center">Vous etes confinè ...</h1>
-<div class="container-cards">
+<div class="container-hidden-cards">
 
 <div class="container_confinement_photo">
   <%= @confinement.name %>
@@ -11,31 +11,17 @@
 </div>
 
 <div class="hidden_card">
-    <div class="card__inner">
-      <div class="card__face card__face--front">
+    <div class="hidden_card__inner">
+      <div class="hidden_card__face hidden_card__face--front">
         <h2>Card Front</h2>
-      </div>
-      <div class="card__face card__face--back">
-        <div class="card__content">
-          <div class="card__header">
-            <img src="" alt="" class="pp" />
-          </div>
-        </div>
       </div>
     </div>
   </div>
 
   <div class="hidden_card2">
-    <div class="card__inner2">
-      <div class="card__face card__face--front">
+    <div class="hidden_card__inner2">
+      <div class="hidden_card__face hidden_card__face--front">
         <h2>Card Front</h2>
-      </div>
-      <div class="card__face card__face--back">
-        <div class="card__content">
-          <div class="card__header">
-            <img src="" alt="" class="pp" />
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -45,15 +31,9 @@
       <div class="card__face card__face--front">
         <h2>Card Front</h2>
       </div>
-      <div class="card__face card__face--back">
-        <div class="card__content">
-          <div class="card__header">
-            <img src="" alt="" class="pp" />
-          </div>
-        </div>
-      </div>
     </div>
   </div>
+
   <%= link_to "Reserve", confinement_bookings_path(@confinement), method: :post, class: "btn btn-primary", id: "btn-show" %>
   <%= link_to "Go back", root_path, class: "btn btn-primary", id: "btn-show"%>
 </div>
@@ -61,16 +41,16 @@
 
 
 <script>
-const card = document.querySelector(".hidden_card");
-const card2 = document.querySelector(".hidden_card2");
-const card3 = document.querySelector(".hidden_card3");
+const card = document.querySelector(".hidden_card__face--front");
+const card2 = document.querySelector(".hidden_card__face--front2");
+const card3 = document.querySelector(".hidden_card__face--front3");
 
 card.addEventListener("click", function (e) {
-  card.classList.toggle('is-flipped');
+  card.classList.toggle('border');
 });
 
 card2.addEventListener("click", function (e) {
-  card2.classList.toggle('is-flipped-2');
+  card2.classList.toggle('border-2');
 });
 </script>
 
