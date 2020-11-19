@@ -1,6 +1,18 @@
+<% phrase = ["toto", "tata", "titi"]%>
+
+
 <h1 class="text-center">Vous etes confinè ...</h1>
-<div class="container">
-<div class="card">
+<div class="container-cards">
+
+<div class="container_confinement_photo">
+  <%= @booking.confinement.name %>
+  <div>
+    <%= cl_image_tag @booking.confinement.photo.key, height: 300, width: 400, crop: :fill %>
+  </div>
+  <%= @booking.confinement.description%>
+</div>
+
+<div class="bonus_card">
     <div class="card__inner">
       <div class="card__face card__face--front">
         <h2>Card Front</h2>
@@ -9,23 +21,43 @@
         <div class="card__content">
           <div class="card__header">
             <img src="" alt="" class="pp" />
-            <h2>lorem ipsum</h2>
-          </div>
-          <div class="card__body">
-            <h3> Lorem ipsum, </h3>
-            <p>Lorem ipsum <strong>dolor</strong> sit amet, consectetur <strong>adipiscing</strong> elit. Sed id erat a magna lobortis dictum. Nunc est arcu, <strong>lacinia</strong> quis sapien placerat, <strong>laoreet</strong> tincidunt nulla.</p>
+            <p><%= phrase.sample %></p>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+  <div class="bonus_card">
+    <div class="card__inner2">
+      <div class="card__face card__face--front">
+        <h2>Card Front</h2>
+      </div>
+      <div class="card__face card__face--back">
+        <div class="card__content">
+          <div class="card__header">
+            <img src="" alt="" class="pp" />
+            <p><%= phrase.sample %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= link_to "Go back", confinements_path(@confinement), class: "btn btn-primary", id: "btn-show"%>
 </div>
 
+
+
 <script>
-  const card = document.querySelector(".card__inner");
+const card = document.querySelector(".card__inner");
+const card2 = document.querySelector(".card__inner2");
 
 card.addEventListener("click", function (e) {
   card.classList.toggle('is-flipped');
+});
+
+card2.addEventListener("click", function (e) {
+  card2.classList.toggle('is-flipped-2');
 });
 </script>
 
