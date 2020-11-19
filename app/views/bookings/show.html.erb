@@ -1,25 +1,64 @@
-<div class="container">
-<h1>Checkout your new booking!</h1>
+<% phrase = ["toto", "tata", "titi"]%>
+
+
+<h1 class="text-center">Vous etes confinè ...</h1>
+<div class="container-cards">
+
+<div class="container_confinement_photo">
+  <%= @booking.confinement.name %>
+  <div>
+    <%= cl_image_tag @booking.confinement.photo.key, height: 300, width: 400, crop: :fill %>
+  </div>
+  <%= @booking.confinement.description%>
+</div>
+
+<div class="bonus_card">
+    <div class="card__inner">
+      <div class="card__face card__face--front">
+        <h2>Card Front</h2>
+      </div>
+      <div class="card__face card__face--back">
+        <div class="card__content">
+          <div class="card__header">
+            <img src="" alt="" class="pp" />
+            <p><%= phrase.sample %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bonus_card">
+    <div class="card__inner2">
+      <div class="card__face card__face--front">
+        <h2>Card Front</h2>
+      </div>
+      <div class="card__face card__face--back">
+        <div class="card__content">
+          <div class="card__header">
+            <img src="" alt="" class="pp" />
+            <p><%= phrase.sample %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= link_to "Go back", confinements_path(@confinement), class: "btn btn-primary", id: "btn-show"%>
 </div>
 
 
-  <% bnm = ["toto", "tata", "titi", "tete", "tata"]%>
-  <% mnb = ["zozo", "zaza", "zeze", "zyzy"]%>
 
-<div class="container">
- <ul>
-    <li> <%= @booking.confinement.name %> </li>
-    <li> <%= @booking.confinement.description %> </li>
+<script>
+const card = document.querySelector(".card__inner");
+const card2 = document.querySelector(".card__inner2");
 
-  <div class ="rectangle">
-    <%= bnm.sample%>
-  </div>
+card.addEventListener("click", function (e) {
+  card.classList.toggle('is-flipped');
+});
 
-  <div class ="rectangle2">
-    <%= mnb.sample%>
-  </div>
- </ul>
+card2.addEventListener("click", function (e) {
+  card2.classList.toggle('is-flipped-2');
+});
+</script>
 
-<%= "Congratulations, #{@booking.user.name}! You have successfully booked your confinement!"%>
 
-</div>

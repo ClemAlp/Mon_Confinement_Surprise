@@ -1,12 +1,23 @@
 // Specific CSS for your home-page
+body, html {
+  height: 100%;
+}
+
 h1, p {
   color: white;
   font-family: 'Roboto', sans-serif;
 }
 
+.bg {
+  background-image: asset-url("home_background.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .card-home {
-  margin-top: 100px;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
   width: 550px;
 }
 
