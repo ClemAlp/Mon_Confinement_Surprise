@@ -1,10 +1,10 @@
 <div class="container">
-  <h1>Confinements list</h1>
+  <h1>Confinements displonibles </h1>
 
   <div class="row d-flex">
     <% @confinements.each do |confinement| %>
     <div class="col-12 col-lg-4">
-      <div class="card-confi mb-3">
+      <div class="card-confi my-3">
         <%= cl_image_tag confinement.photo.key, class: '' %>
         <div class="card-confi-infos">
         <div class="name"> <%= confinement.name %> </div>
