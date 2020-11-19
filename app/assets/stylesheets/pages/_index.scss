@@ -1,13 +1,7 @@
 // Import page-specific CSS files here.
 @import "home";
-<<<<<<< HEAD
 @import "show_confinement";
 @import "show_booking";
-=======
-
-@import "show_booking";
-@import "show_confinement";
->>>>>>> 529410f5b6920d6a835c030e9721b999f73dc192
 
 body{
  background-color: #E5E5E5;
@@ -25,4 +19,5 @@ p {
 
 .buttons a{
   color: white;
+  border-radius: 25px;
 }

@@ -6,7 +6,11 @@
           <%= cl_image_tag @confinement.photo.key, height: 300, width: 400, crop: :fill %>
         </div>
         <div class="ratings">
-          <p>Interactions sociales <%= @confinement.first_criteria %></p>
+          <p>Interactions sociales
+            <% @confinement.first_criteria_rating.to_i.times do  %>
+            <span class="glyphicon glyphicon-star"></span>
+            <% end %>
+          </p>
           <p>Pétage de cable <%= @confinement.second_criteria %></p>
           <p>Uber Eats friendly <%= @confinement.third_criteria %></p>
         </div>
@@ -22,3 +26,4 @@
       </div>
   </div>
 </div>
+
