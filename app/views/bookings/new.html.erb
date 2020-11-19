@@ -1,44 +1,77 @@
 
-<div class="container">
-  <h1>Récapitulatif de votre confinement choisi:</h1>
-  <h3><%= @confinement.name %></h3>
-  <div class="card-booking">
-    <img class = "rounded"><%= cl_image_tag @confinement.photo.key, height: 300, width: 400, crop: :fill %>
+<h1 class="text-center">Vous etes confinè ...</h1>
+<div class="container-cards">
+
+<div class="container_confinement_photo">
+  <%= @confinement.name %>
+  <div>
+    <%= cl_image_tag @confinement.photo.key, height: 300, width: 400, crop: :fill %>
   </div>
-
- <div class="cards-choice">
-  <h3> Piocher 2 cartes parmi les 3 présentées </h3>
-  </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="card"  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path "kittencard.png", height: 300, width: 400, crop: :fill %>')">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="card"  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path "kittencard.png", height: 300, width: 400, crop: :fill %>')">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="card"  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= image_path "kittencard.png", height: 300, width: 400, crop: :fill %>')">
-          </div>
-        </div>
-      </div>
-    </div>
-
-<%= link_to "Reserve", confinement_bookings_path(@confinement), method: :post %>
-
-
+  <%= @confinement.description%>
 </div>
+
+<div class="hidden_card">
+    <div class="card__inner">
+      <div class="card__face card__face--front">
+        <h2>Card Front</h2>
+      </div>
+      <div class="card__face card__face--back">
+        <div class="card__content">
+          <div class="card__header">
+            <img src="" alt="" class="pp" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden_card2">
+    <div class="card__inner2">
+      <div class="card__face card__face--front">
+        <h2>Card Front</h2>
+      </div>
+      <div class="card__face card__face--back">
+        <div class="card__content">
+          <div class="card__header">
+            <img src="" alt="" class="pp" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hidden_card3">
+    <div class="card__inner2">
+      <div class="card__face card__face--front">
+        <h2>Card Front</h2>
+      </div>
+      <div class="card__face card__face--back">
+        <div class="card__content">
+          <div class="card__header">
+            <img src="" alt="" class="pp" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= link_to "Reserve", confinement_bookings_path(@confinement), method: :post, class: "btn btn-primary", id: "btn-show" %>
+  <%= link_to "Go back", root_path, class: "btn btn-primary", id: "btn-show"%>
+</div>
+
+
+
+<script>
+const card = document.querySelector(".hidden_card");
+const card2 = document.querySelector(".hidden_card2");
+const card3 = document.querySelector(".hidden_card3");
+
+card.addEventListener("click", function (e) {
+  card.classList.toggle('is-flipped');
+});
+
+card2.addEventListener("click", function (e) {
+  card2.classList.toggle('is-flipped-2');
+});
+</script>
+
 
