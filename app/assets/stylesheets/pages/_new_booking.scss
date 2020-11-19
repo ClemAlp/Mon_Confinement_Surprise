@@ -63,7 +63,31 @@
   justify-content: center;
 }
 
+.hidden_card__face--front2 {
+  background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden_card__face--front3 {
+  background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .hidden_card__face--front h2 {
+  color: #FFF;
+  font-size: 22px;
+}
+
+.hidden_card__face--front2 h2 {
+  color: #FFF;
+  font-size: 22px;
+}
+
+.hidden_card__face--front3 h2 {
   color: #FFF;
   font-size: 22px;
 }
