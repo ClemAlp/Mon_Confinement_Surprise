@@ -1,9 +1,10 @@
+
 <div class="container">
-<ul>
-  <li> <%= @confinement.name %> </li>
-  <li> <%= @confinement.description %> </li>
-  <li> <%= @user.name %> </li>
-</ul>
+  <h1>Récapitulatif de votre confinement choisi:</h1>
+  <h3><%= @confinement.name %></h3>
+  <div class="card-booking">
+    <img class = "rounded"><%= cl_image_tag @confinement.photo.key, height: 300, width: 400, crop: :fill %>
+  </div>
 
  <div class="cards-choice">
   <h3> Piocher 2 cartes parmi les 3 présentées </h3>
