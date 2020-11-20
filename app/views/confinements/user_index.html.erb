@@ -1,11 +1,18 @@
-<h1> Bienvenue <% current_user.name %> </h1>
+<h1 class = "text-center"> Bienvenue <%= @user.name %> </h1>
 <div class="container">
-<ul>
+
+  <div class="row d-flex">
     <% @confinements.each do |confinement| %>
-    <li> <%= confinement.name %> <%= confinement.description %>
-      <%= link_to "edit", edit_confinement_path(confinement) %> ||
-      <%= link_to 'Destroy', confinement_path(confinement), method: :delete %>
-    </li>
+    <div class="col-12 col-lg-4">
+      <div class="card-confi my-3">
+        <%= cl_image_tag confinement.photo.key, class: '' %>
+        <div class="card-confi-infos">
+        <div class="name"> <%= confinement.name %> </div>
+        <div id= "link_destroy"><%= link_to 'Destroy', confinement_path(confinement), method: :delete %> </div>
+        <div id= "link_edit"  ><%= link_to "edit", edit_confinement_path(confinement) %> </div>
+        </div>
+      </div>
+    </div>
     <% end %>
-</ul>
+  </div>
 </div>

@@ -6,7 +6,12 @@
 
 
 body{
- background-color: #E5E5E5;
+ background-color: #F5F5F5;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  color: #F69730;
 }
 
 h2{
@@ -22,5 +27,5 @@ p {
 
 .buttons a{
   color: white;
-  border-radius: 25px;
+  text-decoration: none;
 }
