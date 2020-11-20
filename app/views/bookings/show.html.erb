@@ -31,7 +31,7 @@
       <div class="card__face card__face--back">
         <div class="card__content">
           <div class="card__header">
-            <i class="<%= img = bonus.keys.sample%> fa-4x"></i>
+            <i class="<%= img = bonus.keys.sample%> fa-2x"></i>
             <br>
             <br>
             <p class="text_icon"><%= bonus[img] %></p>
@@ -49,7 +49,7 @@
       <div class="card__face card__face--back">
         <div class="card__content">
           <div class="card__header">
-            <i  class="<%= img = malus.keys.sample%> fa-4x"></i>
+            <i  class="<%= img = malus.keys.sample%> fa-2x"></i>
             <br>
             <br>
             <p class="text_icon"><%= malus[img] %></p>
@@ -58,7 +58,7 @@
       </div>
     </div>
   </div>
-  <%= link_to "Go back", confinements_path(@confinement), class: "btn btn-primary", id: "btn-show"%>
+  <%= link_to "Retour à la liste", confinements_path(@confinement), class: "btn btn-primary", id: "btn-show"%>
 </div>
 
 
