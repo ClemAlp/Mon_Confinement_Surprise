@@ -8,7 +8,7 @@
     border-radius: 15px;
 }
 .simple_form {
-  padding-top:50px;
+  padding-top: 7px;;
 }
 
 .btn{
@@ -33,3 +33,17 @@
 .container-links{
   margin-left: 30%;
 }
+
+#link_retour a{
+  left: 50px;
+  font-size: 22px;
+  color: white;
+  background-color: #F69730;
+  border-radius: 5px;
+  position: absolute;
+  text-decoration: none;
+  bottom: 19px;
+  padding: 8px 16px;
+
+}
+

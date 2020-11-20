@@ -11,10 +11,9 @@ puts "Cleaning database..."
 Booking.destroy_all
 Confinement.destroy_all
 User.destroy_all
-
 puts "Adding Confinement to the DB"
-
 user = User.create!(email: 'zachariahrossy@gmail.com', password: 'testing', name: 'Zach')
+
 
 
 
