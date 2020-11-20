@@ -1,18 +1,20 @@
 
-<h1 class="text-center">Vous etes confinè ...</h1>
+<h1 class="text-center"><%= @confinement.name %></h1>
 <div class="container-hidden-cards">
 
 <div class="container_confinement_photo">
-  <%= @confinement.name %>
   <div>
     <%= cl_image_tag @confinement.photo.key, height: 300, width: 400, crop: :fill %>
   </div>
-  <p class = "card-p">
-    <%= @confinement.description%>
-</p>
+
+  <div class= "draw_cards">
+  <h4 style="position: absolute; top: -300px; right: -945px;">
+  Pick 2 cards to reserve your Confinement!</h4>
+  </div>
+
+  <div class = "card-p">
+  </div>
 </div>
-
-
 
 <div class="hidden_card">
     <div class="hidden_card__inner">
@@ -22,42 +24,64 @@
     </div>
   </div>
 
-  <div class="hidden_card2">
-    <div class="hidden_card__inner2">
-      <div class="hidden_card__face hidden_card__face--front2">
+  <div class="hidden_card">
+    <div class="hidden_card__inner">
+      <div class="hidden_card__face hidden_card__face--front">
         <h2>Card Front</h2>
       </div>
     </div>
   </div>
 
-  <div class="hidden_card3">
-    <div class="card__inner2">
-      <div class="hidden_card__face hidden_card__face--front3">
+  <div class="hidden_card">
+    <div class="hidden_card__inner">
+      <div class="hidden_card__face hidden_card__face--front">
         <h2>Card Front</h2>
       </div>
     </div>
   </div>
 
-  <%= link_to "Reserve", confinement_bookings_path(@confinement), method: :post, class: "btn btn-primary", id: "btn-reserve" %>
-  <%= link_to "Go back", root_path, class: "btn btn-primary", id: "btn-show"%>
+  <div class= "btn-container">
+    <div class = "reserve-container">
+      <%= link_to "Reserve", confinement_bookings_path(@confinement), method: :post, class: "btn btn-primary disabled", id: "btn-reserve" %>
+    </div>
 
+    <div class = "back-container">
+      <%= link_to "Go back", root_path, class: "btn btn-primary", id: "btn-show"%>
+    </div>
+  </div>
 </div>
 
 
 
 <script>
-const card = document.querySelector(".hidden_card__face--front");
-const card2 = document.querySelector(".hidden_card__face--front2");
-const card3 = document.querySelector(".hidden_card__face--front3");
-const reserve = document.querySelector("#btn-reserve")
+function initCards() {
 
-card.addEventListener("click", function (e) {
-  card.classList.toggle('border');
-});
 
-card2.addEventListener("click", function (e) {
-  card2.classList.toggle('border-2');
-});
+  const card = document.querySelectorAll(".hidden_card");
+  const reserve = document.querySelector("#btn-reserve");
+  const active = document.querySelectorAll('hidden_card border-zach');
+
+  let numbers = 0
+
+  console.log(active.length);
+
+  card.forEach((element) => {
+    element.addEventListener("click", function (e) {
+    element.classList.toggle('border-zach');
+    if (element.classList.contains('border-zach')){
+      numbers += 1;
+    }else{
+      numbers -= 1;
+    };
+      if(numbers != 2){
+      reserve.classList.add('disabled');
+      }else{
+      reserve.classList.remove('disabled');
+    };
+    });
+  });
+};
+initCards();
 </script>
 
 

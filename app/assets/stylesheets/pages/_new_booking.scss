@@ -10,28 +10,15 @@
     width: 144px;
     height: 200px;
     perspective: 1000px;
+    z-index: 1000;
+
 }
 
-.hidden_card2 {
-  position: relative;
-  width: 144px;
-  height: 200px;
-  perspective: 1000px;
-}
-
-.hidden_card3 {
-  position: relative;
-  width: 144px;
-  height: 200px;
-  perspective: 1000px;
-}
-
-.hidden-card__face.border {
-  border: 10px solid red;
-}
-
-.hidden-card__face2.border {
-  transform: rotateY(180deg);
+.border-zach{
+  border: 3px solid rgba(233, 109, 7, 0.822);
+  transition: 0.1s;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .container-hidden-cards{
@@ -95,7 +82,7 @@
 .text-center {
   color: black;
   text-align: center !important;
-  padding-top: 15px;
+  padding-top: 70px;
 }
 
 
@@ -121,11 +108,41 @@
   padding: 10px;
 }
 
+.btn-container{
+  position: absolute;
+  padding-top: 370px;
+  padding-left: 570px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
 #btn-show:hover{
   background: #e17a0a;
   border-color:#F69730;
 }
 
 .card-p {
-  width: 200px;
+  width: 400px;
+  height: 70px;
+  overflow: auto;
+  text-align: center;
+}
+
+.fadein {
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+
+.hidden_card.loaded .fadein {
+  opacity: 1;
+}
+
+.reserve-container {
+  padding-right: 50px;
+}
+
+.draw_cards{
+  z-index: 1001;
+  position: absolute;
+  top: -100;
 }
