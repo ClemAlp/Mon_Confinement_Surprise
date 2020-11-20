@@ -15,11 +15,13 @@
 <div class="container-cards">
 
 <div class="container_confinement_photo">
-  <%= @booking.confinement.name %>
+   <strong> <h4> <%= @booking.confinement.name %></h4></strong>
   <div>
     <%= cl_image_tag @booking.confinement.photo.key, height: 300, width: 400, crop: :fill %>
   </div>
-  <%= @booking.confinement.description%>
+  <div class="description_show_booking">
+   <p><%= @booking.confinement.description%></p>
+  </div>
 </div>
 
 <div class="bonus_card">

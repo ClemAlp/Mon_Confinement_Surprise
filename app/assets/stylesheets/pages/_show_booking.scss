@@ -47,7 +47,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding-left: 600px;
-  height: 500px;
+  height: 600px;
 }
 .card__face {
   position: absolute;
@@ -148,6 +148,11 @@
   position: absolute;
   margin-left: 60px;
   padding-top: 30px;
+}
+.description_show_booking {
+    text-align: justify;
+    width: 450px;
+    margin-left: -2px;
 }
 
 #btn-show{
