@@ -162,13 +162,16 @@
 }
 
 #btn-show{
-  border-radius:2px;
+  border-radius: 2px;
   width: 200px;
   height: 50px;
   text-align: center;
   padding: 10px;
   font-size: 19px;
-  font-family: roboto ;
+  font-family: roboto;
+  position: relative;
+  left: 100px;
+  bottom: -40px;
 }
 
 #btn-show:hover{

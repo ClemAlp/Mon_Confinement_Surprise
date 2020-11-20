@@ -8,8 +8,8 @@
         <%= cl_image_tag confinement.photo.key, class: '' %>
         <div class="card-confi-infos">
         <div class="name"> <%= confinement.name %> </div>
-        <div id= "link_destroy"><%= link_to 'Destroy', confinement_path(confinement), method: :delete %> </div>
-        <div id= "link_edit"  ><%= link_to "edit", edit_confinement_path(confinement) %> </div>
+        <div id= "link_destroy"><%= link_to 'Supprimer', confinement_path(confinement), method: :delete %> </div>
+        <div id= "link_edit"  ><%= link_to "Modifier", edit_confinement_path(confinement) %> </div>
         </div>
       </div>
     </div>
