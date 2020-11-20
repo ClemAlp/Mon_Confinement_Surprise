@@ -75,7 +75,7 @@
 }
 
 .card__face--back {
-  background-color: var(--light);
+  background-image: linear-gradient(to bottom left, var(--primary) 10%, var(--secondary) 115%);
   transform: rotateY(180deg);
 }
 
@@ -85,9 +85,8 @@
 }
 
 .card__header {
-  position: relative;
-  padding: 30px 30px 40px;
-  margin-left: 12px;
+  padding: 25px 28px 4px;
+  margin-left: 16px;
 }
 
 .card__header:after {
@@ -105,7 +104,7 @@
 .text-center_show {
     color: black;
     text-align: center !important;
-    padding-top: 48px;
+    padding-top: 70px;
   }
 .pp {
   padding-top: 40px;
