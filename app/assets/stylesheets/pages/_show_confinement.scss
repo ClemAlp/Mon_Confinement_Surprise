@@ -1,7 +1,7 @@
 
 .confinements-image-card {
-  margin: 50px;
-  height: 600px;
+  margin: 80px;
+  height: 650px;
   background-size: cover !important;
   background-color: white;
   background-position: center;
@@ -17,26 +17,26 @@
 }
 
 .show-picture {
-  width: 450px;
+  width: 400px;
   margin-left: 50px;
   margin-bottom: 25px;
 }
 
 .description {
-  text-weight: light;
-  text-align: justify;
-  width: 450px;
+  text-align: center;
+  width: 400px;
   margin-left: 50px;
 }
 
 .stars-container {
   display: flex;
   width: 300px;
-  margin-left: 120px;
+  margin-left: 70px;
   margin-top: 80px;
 }
 
 .show-btn {
+  margin-top: 10px;
   margin-left: 150px;
 }
 
