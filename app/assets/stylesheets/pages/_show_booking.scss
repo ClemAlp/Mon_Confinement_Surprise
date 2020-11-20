@@ -40,15 +40,17 @@
 
 .container-cards{
   position: relative;
-  margin: 10px 200px;
-  border-radius: 50px;
+  margin: 25px 200px;
+  border-radius: 25px;
   background-color: white;
   padding: 90px 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding-left: 600px;
   height: 600px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+
 .card__face {
   position: absolute;
   width: 100%;
@@ -85,6 +87,7 @@
 .card__header {
   position: relative;
   padding: 30px 30px 40px;
+  margin-left: 12px;
 }
 
 .card__header:after {
@@ -99,7 +102,11 @@
   z-index: -1;
   border-radius: 0px 0px 50% 0px;
 }
-
+.text-center_show {
+    color: black;
+    text-align: center !important;
+    padding-top: 48px;
+  }
 .pp {
   padding-top: 40px;
   display: block;
@@ -136,31 +143,33 @@
   font-size: 18px;
   line-height: 1.4;
 }
-
 .text-center {
   color: black;
   text-align: center !important;
   padding-top: 15px;
 }
 
-
 .container_confinement_photo{
   position: absolute;
   margin-left: 60px;
   padding-top: 30px;
 }
+
 .description_show_booking {
     text-align: justify;
     width: 450px;
     margin-left: -2px;
+    margin-top: 30px
 }
 
 #btn-show{
-  border-radius: 25px;
+  border-radius:2px;
   width: 200px;
   height: 50px;
   text-align: center;
   padding: 10px;
+  font-size: 19px;
+  font-family: roboto ;
 }
 
 #btn-show:hover{

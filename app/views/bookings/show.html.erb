@@ -10,11 +10,11 @@
 "fas fa-frown-open" =>"Ton cousin éloigné te contacte pour se confiner avec toi …",
 "far fa-sad-cry" =>"Vous avez joué au coiffeur, vous avez perdu …"}%>
 
-<h1 class="text-center">Vous etes confinè ...</h1>
+<h1 class="text-center_show">Vous etes confinè ...</h1>
 <div class="container-cards">
 
 <div class="container_confinement_photo">
-   <strong> <h4> <%= @booking.confinement.name %></h4></strong>
+   <h2 class="show-booking-title"> <%= @booking.confinement.name %></h2>
   <div>
     <%= cl_image_tag @booking.confinement.photo.key, height: 300, width: 400, crop: :fill %>
   </div>
@@ -31,7 +31,7 @@
       <div class="card__face card__face--back">
         <div class="card__content">
           <div class="card__header">
-            <i class="<%= img = bonus.keys.sample%> fa-4x"></i>
+            <i class="<%= img = bonus.keys.sample%> fa-2x"></i>
             <br>
             <br>
             <p class="text_icon"><%= bonus[img] %></p>
@@ -49,7 +49,7 @@
       <div class="card__face card__face--back">
         <div class="card__content">
           <div class="card__header">
-            <i  class="<%= img = malus.keys.sample%> fa-4x"></i>
+            <i  class="<%= img = malus.keys.sample%> fa-2x"></i>
             <br>
             <br>
             <p class="text_icon"><%= malus[img] %></p>
@@ -58,7 +58,7 @@
       </div>
     </div>
   </div>
-  <%= link_to "Go back", confinements_path(@confinement), class: "btn btn-primary", id: "btn-show"%>
+  <%= link_to "Retour à la liste", confinements_path(@confinement), class: "btn btn-primary", id: "btn-show"%>
 </div>
 
 
