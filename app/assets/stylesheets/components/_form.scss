@@ -34,16 +34,24 @@
   margin-left: 30%;
 }
 
-#link_retour a{
-  left: 50px;
-  font-size: 22px;
-  color: white;
-  background-color: #F69730;
-  border-radius: 5px;
-  position: absolute;
-  text-decoration: none;
-  bottom: 19px;
-  padding: 8px 16px;
-
+#link_retour {
 }
 
+#link_retour a{
+  font-size: 22px;
+  color: #F69730;
+  background-color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 8px 16px;
+  margin-bottom: 20px;
+}
+
+#link_retour a:hover{
+  color: grey;
+}
+
+.link-center {
+  text-align: center;
+  margin-bottom: 20px;
+}
