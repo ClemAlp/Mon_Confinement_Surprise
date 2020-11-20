@@ -1,16 +1,23 @@
+<div class ="recap">
+  <h3>Récapitulatif de votre confinement choisi:</h3>
+</div>
 
-<h1 class="text-center"><%= @confinement.name %></h1>
+<div class ="name-div">
+<h3 class="hidden-text-center"><%= @confinement.name %></h3>
+</div>
 <div class="container-hidden-cards">
 
-<div class="container_confinement_photo">
+
+  <div class= "draw_cards">
+    <h4 style="position: absolute";>
+      Pick 2 cards to reserve your Confinement!</h4>
+  </div>
+
+<div class="container_hidden_photo">
   <div>
     <%= cl_image_tag @confinement.photo.key, height: 300, width: 400, crop: :fill %>
   </div>
 
-  <div class= "draw_cards">
-  <h4 style="position: absolute; top: -300px; right: -945px;">
-  Pick 2 cards to reserve your Confinement!</h4>
-  </div>
 
   <div class = "card-p">
   </div>
@@ -19,7 +26,7 @@
 <div class="hidden_card">
     <div class="hidden_card__inner">
       <div class="hidden_card__face hidden_card__face--front">
-        <h2>Card Front</h2>
+        <h2>?</h2>
       </div>
     </div>
   </div>
@@ -27,7 +34,7 @@
   <div class="hidden_card">
     <div class="hidden_card__inner">
       <div class="hidden_card__face hidden_card__face--front">
-        <h2>Card Front</h2>
+        <h2>?</h2>
       </div>
     </div>
   </div>
@@ -35,18 +42,18 @@
   <div class="hidden_card">
     <div class="hidden_card__inner">
       <div class="hidden_card__face hidden_card__face--front">
-        <h2>Card Front</h2>
+        <h2>?</h2>
       </div>
     </div>
   </div>
 
   <div class= "btn-container">
     <div class = "reserve-container">
-      <%= link_to "Reserve", confinement_bookings_path(@confinement), method: :post, class: "btn btn-primary disabled", id: "btn-reserve" %>
+      <%= link_to "Je me confine!", confinement_bookings_path(@confinement), method: :post, class: "btn btn-primary-buttons disabled", id: "btn-reserve" %>
     </div>
 
     <div class = "back-container">
-      <%= link_to "Go back", root_path, class: "btn btn-primary", id: "btn-show"%>
+      <%= link_to "Retour aux confinements", root_path, class: "btn btn-primary buttons"%>
     </div>
   </div>
 </div>

@@ -1,5 +1,7 @@
 <div class="container" style="position: relative">
 <h1 class="text-center">Modifier votre confinement</h1>
 <%= render 'form', confinement: @confinement %>
-<div id= "link_retour"><%= link_to 'Retour à la liste', confinements_path %></div>
+<div class="link-center">
+  <div id= "link_retour"><%= link_to 'Retour aux confinements', confinements_path %></div>
+</div>
 </div>
