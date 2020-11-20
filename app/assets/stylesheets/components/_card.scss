@@ -51,3 +51,26 @@ h1 {
   color: white;
   text-weight: bold;
 }
+#link_edit{
+  margin-right: 12px;
+}
+#link_destroy {
+  margin-right: 12px;
+}
+
+#link_edit a{
+  font-size: 12px;
+  color: white;
+  background-color: #F69730;
+  border-radius: 5px;
+  padding: 5px;
+  text-decoration: none;
+}
+#link_destroy a{
+  font-size: 12px;
+  color: white;
+  background-color: #F69730;
+  border-radius: 5px;
+  padding: 5px;
+  text-decoration: none;
+}

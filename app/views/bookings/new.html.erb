@@ -7,8 +7,12 @@
   <div>
     <%= cl_image_tag @confinement.photo.key, height: 300, width: 400, crop: :fill %>
   </div>
-  <%= @confinement.description%>
+  <p class = "card-p">
+    <%= @confinement.description%>
+</p>
 </div>
+
+
 
 <div class="hidden_card">
     <div class="hidden_card__inner">
