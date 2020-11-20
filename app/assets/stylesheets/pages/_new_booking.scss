@@ -15,9 +15,9 @@
 }
 
 .border-zach{
-  border: 5px solid red;
-  transition: 0.5s;
-  border-radius: 18px;
+  border: 3px solid rgba(233, 109, 7, 0.822);
+  transition: 0.1s;
+  border-radius: 20px;
   overflow: hidden;
 }
 
@@ -143,4 +143,8 @@
 
 .back-container{
 
+}
+
+.draw{
+  z-index: 1000;
 }

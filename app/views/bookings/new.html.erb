@@ -11,8 +11,6 @@
   </div>
 </div>
 
-
-
 <div class="hidden_card">
     <div class="hidden_card__inner">
       <div class="hidden_card__face hidden_card__face--front">
@@ -51,37 +49,34 @@
 
 
 <script>
-const card = document.querySelectorAll(".hidden_card");
-const reserve = document.querySelector("#btn-reserve");
-const active = document.querySelectorAll('hidden_card border-zach');
+function initCards() {
 
-let numbers = 0
 
-console.log(active.length);
+  const card = document.querySelectorAll(".hidden_card");
+  const reserve = document.querySelector("#btn-reserve");
+  const active = document.querySelectorAll('hidden_card border-zach');
 
-window.onload = function() {
-    document.card.classList += " loaded";
-}
+  let numbers = 0
 
-card.forEach((element) => {
-  element.addEventListener("click", function (e) {
-  element.classList.toggle('border-zach');
-  if (element.classList.contains('border-zach')){
-    numbers += 1;
-  }else{
-    numbers -= 1;
-  };
-    if(numbers != 2){
-    reserve.classList.add('disabled');
+  console.log(active.length);
+
+  card.forEach((element) => {
+    element.addEventListener("click", function (e) {
+    element.classList.toggle('border-zach');
+    if (element.classList.contains('border-zach')){
+      numbers += 1;
     }else{
-    reserve.classList.remove('disabled');
-  };
+      numbers -= 1;
+    };
+      if(numbers != 2){
+      reserve.classList.add('disabled');
+      }else{
+      reserve.classList.remove('disabled');
+    };
+    });
   });
-});
-
-
-
-console.log(numbers)
+};
+initCards();
 </script>
 
 
