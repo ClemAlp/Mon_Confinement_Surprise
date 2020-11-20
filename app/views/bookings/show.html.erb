@@ -1,31 +1,32 @@
-<% bonus = { "far fa-bread-loaf" => "Vous savez maintenant faire du pain, bravo !",
+<% bonus = { "fas fa-bread-slice" => "Vous savez maintenant faire du pain, bravo !",
 "fas fa-dumbbell" =>"+3kg de masse musculaire, vos séances portent leurs fruits",
 "fas fa-praying-hands" =>"Grace à la pratique du Yoga, vous maitrisez parfaitement la pose du Rajakapotasana",
 "fas fa-hands-helping" =>"Vous faites du tri chez vous et donnez à une association",
 "fas fa-syringe" =>"Miracle, grâce à vos expérimentations culinaires, vous trouvez par hasard le vaccin anti-covid !",
 }%>
-<% malus = {"fas fa-wifi-slash" =>"Oups … panne de 4G",
-"fas fa-siren-on" =>"Vous oubliez votre attestation et prenez une amende",
+<% malus = {"fas fa-phone-slash" =>"Oups … panne de 4G",
+"fas fa-landmark" =>"Vous oubliez votre attestation et prenez une amende",
 "fas fa-toilet-paper-slash" =>"Panne de PQ au supermarché ",
-"fas fa-house-return" =>"Ton cousin éloigné te contacte pour se confiner avec toi …",
+"fas fa-frown-open" =>"Ton cousin éloigné te contacte pour se confiner avec toi …",
 "far fa-sad-cry" =>"Vous avez joué au coiffeur, vous avez perdu …"}%>
-
 
 <h1 class="text-center">Vous etes confinè ...</h1>
 <div class="container-cards">
 
 <div class="container_confinement_photo">
-  <%= @booking.confinement.name %>
+   <strong> <h4> <%= @booking.confinement.name %></h4></strong>
   <div>
     <%= cl_image_tag @booking.confinement.photo.key, height: 300, width: 400, crop: :fill %>
   </div>
-  <%= @booking.confinement.description%>
+  <div class="description_show_booking">
+   <p><%= @booking.confinement.description%></p>
+  </div>
 </div>
 
 <div class="bonus_card">
     <div class="card__inner">
       <div class="card__face card__face--front">
-        <h1>?</h1>
+        <h1>? </h1>
       </div>
       <div class="card__face card__face--back">
         <div class="card__content">
@@ -74,5 +75,3 @@ card2.addEventListener("click", function (e) {
   card2.classList.toggle('is-flipped-2');
 });
 </script>
-
-
