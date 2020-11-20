@@ -10,11 +10,11 @@
 "fas fa-frown-open" =>"Ton cousin éloigné te contacte pour se confiner avec toi …",
 "far fa-sad-cry" =>"Vous avez joué au coiffeur, vous avez perdu …"}%>
 
-<h1 class="text-center">Vous etes confinè ...</h1>
+<h1 class="text-center_show">Vous etes confinè ...</h1>
 <div class="container-cards">
 
 <div class="container_confinement_photo">
-   <strong> <h4> <%= @booking.confinement.name %></h4></strong>
+   <h2 class="show-booking-title"> <%= @booking.confinement.name %></h2>
   <div>
     <%= cl_image_tag @booking.confinement.photo.key, height: 300, width: 400, crop: :fill %>
   </div>
@@ -60,9 +60,6 @@
   </div>
   <%= link_to "Retour à la liste", confinements_path(@confinement), class: "btn btn-primary", id: "btn-show"%>
 </div>
-
-
-
 <script>
 const card = document.querySelector(".card__inner");
 const card2 = document.querySelector(".card__inner2");
