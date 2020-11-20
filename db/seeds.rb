@@ -24,13 +24,13 @@ file = URI.open('https://res.cloudinary.com/drzczicvd/image/upload/v1605865167/C
 conf_1.photo.attach(io: file, filename: 'chomage_confinement.png', content_type: 'image/png')
 conf_1.save!
 
-conf_2 = Confinement.new(name: 'Combo télétravail et école à la maison', description: 'Vous avez la chance de respirer l’air pur de la campagne et de ne faire qu’un avec la nature, vous qui êtes végétarien. Mais cela à un prix. Il vous faudra supporter belle maman et sa spécialité : la langue de boeuf … Ouf vous vous échapper et prétextez une envie irrépressible de rentrer en connexion avec les arbres de la foret d’à coté, vous en profiter pour cueillir des champignons !
+conf_2 = Confinement.new(name: 'Combo télétravail et école à la maison', description: 'Vous avez toujours rêvé de travailler en claquette chaussettes ? N’attendez plus et choisissez ce confinement ! En plus de maitriser l’art des conférences zoom tout en changeant les couches de votre petit dernier, vous serez incollable sur les tables de multiplication et le théorème de pythagore.
 ', user: user, first_criteria: 4, second_criteria: 3, third_criteria: 5)
 file = URI.open('https://res.cloudinary.com/drzczicvd/image/upload/v1605865120/Confinement/teletravail_isdfh6.jpg')
 conf_2.photo.attach(io: file, filename: 'teletravail_confinement.png', content_type: 'image/png')
 conf_2.save!
 
-conf_3 = Confinement.new(name: 'Chez belle maman en Auvergne', description: 'Vous avez toujours rêvé de travailler en claquette chaussettes ? N’attendez plus et choisissez ce confinement ! En plus de maitriser l’art des conférences zoom tout en changeant les couches de votre petit dernier, vous serez incollable sur les tables de multiplication et le théorème de pythagore.
+conf_3 = Confinement.new(name: 'Chez belle maman en Auvergne', description: 'Vous avez la chance de respirer l’air pur de la campagne et de ne faire qu’un avec la nature, vous qui êtes végétarien. Mais cela à un prix. Il vous faudra supporter belle maman et sa spécialité : la langue de boeuf … Ouf vous vous échapper et prétextez une envie irrépressible de rentrer en connexion avec les arbres de la foret d’à coté, vous en profiter pour cueillir des champignons !
 ', user: user, first_criteria: 3, second_criteria: 5, third_criteria: 1)
 file = URI.open('https://res.cloudinary.com/drzczicvd/image/upload/v1605865706/Confinement/bellemaman1_p1knpr.jpg')
 conf_3.photo.attach(io: file, filename: 'teletravail_confinement.png', content_type: 'image/png')
