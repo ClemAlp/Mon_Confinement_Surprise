@@ -3,7 +3,7 @@
     <h2 class="confinement-title"><%= @confinement.name %></h2>
       <div class="row d-flex justify-items-center">
         <div class="show-picture">
-          <%= cl_image_tag @confinement.photo.key, height: 300, width: 400, crop: :fill, :radius => 5 %>
+          <%= cl_image_tag @confinement.photo.key, height: 300, width: 400, crop: :limit, :radius => 5 %>
         </div>
         <div class="stars-container">
           <div class="ratings">
