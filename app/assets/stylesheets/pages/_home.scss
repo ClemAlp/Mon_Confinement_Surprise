@@ -10,19 +10,41 @@ h1, p {
 .main-title {
   color: white;
 }
-.bg {
-  background-image: asset-url("home_background.jpg");
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
 
 .card-home {
   background-color: rgba(0, 0, 0, 0.2);
-  width: 550px;
 }
 
 .card-home-body {
   padding: 20px;
+}
+
+@media(max-width: 1500px) {
+  .bg {
+    background-image: asset-url("home_background.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media(max-width: 1024px) {
+  .bg {
+    background-image: asset-url("home_background.jpg");
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 75%;
+  }
+}
+
+@media(max-width: 414px) {
+  .bg {
+    background-image: asset-url("home_background.jpg");
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 94%;
+  }
 }
